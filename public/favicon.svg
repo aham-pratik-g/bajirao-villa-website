@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#152B23" />
+  <path d="M32 12c-7 8-11 13-11 20a11 11 0 0 0 22 0c0-7-4-12-11-20Z" fill="none" stroke="#C2A05C" stroke-width="1.4" opacity="0.55" />
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="1" fill="#F6F1E7">BV</text>
+</svg>

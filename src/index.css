@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-medium text-forest;
+  }
+
+  ::selection {
+    background: rgba(194, 160, 92, 0.3);
+    color: #152b23;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c2a05c;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-widest text-gold-dark sm:text-xs;
+  }
+
+  .eyebrow-light {
+    @apply text-[11px] font-semibold uppercase tracking-widest text-gold-light sm:text-xs;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-forest text-cream shadow-soft hover:-translate-y-0.5 hover:bg-forest-700;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-forest-900 shadow-soft hover:-translate-y-0.5 hover:bg-gold-light;
+  }
+
+  .btn-outline {
+    @apply border border-forest/25 text-forest hover:border-forest hover:bg-forest hover:text-cream;
+  }
+
+  .btn-outline-light {
+    @apply border border-cream/45 text-cream hover:border-cream hover:bg-cream/10;
+  }
+
+  .btn-whatsapp {
+    @apply bg-[#1FA855] text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#188f47];
+  }
+
+  .card {
+    @apply rounded-3xl bg-white shadow-soft;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-forest transition-colors hover:text-gold-dark;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .image-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .image-zoom:hover img {
+    @apply scale-105;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-forest/15 bg-white px-4 py-3 text-sm text-ink shadow-sm transition placeholder:text-ink/35 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/25;
+  }
+
+  .field-error {
+    @apply border-red-400 focus:border-red-400 focus:ring-red-200;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-forest focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-cream;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overlay-forest {
+    background: linear-gradient(
+      to top,
+      rgba(15, 33, 26, 0.92) 0%,
+      rgba(15, 33, 26, 0.55) 45%,
+      rgba(15, 33, 26, 0.25) 100%
+    );
+  }
+}
