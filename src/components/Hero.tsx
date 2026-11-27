@@ -1,7 +1,9 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, FileText, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { business, waLink } from "../data/villa";
 import { images } from "../data/images";
+
+const photoBrochure = `${import.meta.env.BASE_URL}documents/bajirao-villa-photo-brochure.pdf`;
 
 export default function Hero() {
   return (
@@ -36,6 +38,15 @@ export default function Hero() {
               Explore the Villa
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
+            <a
+              href={photoBrochure}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-light px-7 py-3.5"
+            >
+              <FileText className="h-4 w-4" aria-hidden="true" />
+              View Photo Brochure
+            </a>
             <a
               href={waLink()}
               target="_blank"
