@@ -10,6 +10,11 @@ export type DocumentItem = {
  */
 export const documents: DocumentItem[] = [
   {
+    title: "Villa Photo Brochure",
+    description: "A photo brochure of the villa — rooms, pool, lawn and surroundings.",
+    href: `${import.meta.env.BASE_URL}documents/bajirao-villa-photo-brochure.pdf`,
+  },
+  {
     title: "Villa Information",
     description: "Property overview, accommodation and capacity at a glance.",
     href: `${import.meta.env.BASE_URL}documents/bajirao-villa-information.pdf`,
@@ -37,4 +42,4 @@ export const documents: DocumentItem[] = [
 ];
 
 export const documentsNote =
-  "These are placeholder PDFs created for the website build. They contain no invented rates or rules and should be replaced with the owner's final documents before publishing.";
+  "The villa photo brochure is the owner's document. The remaining PDFs are placeholder summaries created for the website build and should be replaced with the owner's final documents before publishing.";
