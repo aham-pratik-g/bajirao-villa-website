@@ -1,4 +1,5 @@
 import { images } from "./images";
+import { realGalleryItems } from "./realGallery";
 
 export type GalleryItem = {
   id: string;
@@ -9,6 +10,8 @@ export type GalleryItem = {
   type: "image" | "video";
   /** Optional. Leave empty for videos that have not been supplied yet. */
   videoSrc?: string;
+  /** True for actual property photographs supplied by the owner. */
+  realPhoto?: boolean;
 };
 
 export const galleryCategories = [
@@ -28,6 +31,7 @@ export const galleryCategories = [
 const placeholderAlt = "Placeholder stock photograph — not an actual photo of Bajirao Villa.";
 
 export const galleryItems: GalleryItem[] = [
+  ...realGalleryItems,
   {
     id: "exterior-evening",
     title: "Evening at the villa",

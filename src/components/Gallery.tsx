@@ -258,7 +258,9 @@ export default function Gallery({ items = galleryItems, showFilters = true }: Ga
             <p className="mt-1 text-[11px] text-cream/45">
               {current.type === "video"
                 ? "Video placeholder — real property footage will be added before publishing."
-                : "Placeholder photograph — not an actual photo of Bajirao Villa."}
+                : current.realPhoto
+                  ? "Photograph of Bajirao Villa."
+                  : "Placeholder photograph — not an actual photo of Bajirao Villa."}
             </p>
           </div>
         </div>

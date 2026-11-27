@@ -159,4 +159,4 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const galleryPlaceholderNotice =
-  "The photographs on this website are licensed stock placeholders, not actual photographs of Bajirao Villa. Real property photos and videos will replace them before the site is published.";
+  "Photos of the villa exterior, bedrooms, living room, swimming pool, lawn and birthday decorations are actual photographs of Bajirao Villa. The remaining images are licensed stock placeholders and will be replaced as more property photos are supplied.";
